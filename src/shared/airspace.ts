@@ -7,6 +7,7 @@ export const AIRPORT = { id: 'KATL', name: 'Atlanta (fictionalized)', elev: 1000
 export const TRACON_RADIUS = 35; // NM
 export const TOWER_RADIUS = 5; // NM
 export const TOWER_CEILING = 3500; // ft
+export const TRACON_CEILING = 18000; // ft: above this the en route sectors own the airspace
 export const AIRSPACE_RADIUS = 110; // NM, flights beyond this leave the simulation
 export const FIELD_ELEV = AIRPORT.elev;
 
@@ -84,7 +85,7 @@ export const DEPARTURE_INITIAL_ALT = 5000; // under the arrival flows
 export function geoSector(p: Vec, alt: number): PositionId {
   const r = Math.hypot(p.x, p.y);
   if (r <= TOWER_RADIUS && alt < TOWER_CEILING) return 'TWR';
-  if (r <= TRACON_RADIUS) return 'APP';
+  if (r <= TRACON_RADIUS && alt < TRACON_CEILING) return 'APP';
   return p.y - p.x >= 0 ? 'CTR-NW' : 'CTR-SE';
 }
 

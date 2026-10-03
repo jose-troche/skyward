@@ -156,7 +156,7 @@ export type ClientMessage =
   | { v: 1; type: 'advisory.reject'; id: string; reason: RejectReason }
   | { v: 1; type: 'handoff.accept'; flight: string }
   | { v: 1; type: 'agent.toggle'; agent: AgentId; on: boolean }
-  | { v: 1; type: 'sim.control'; action: 'pause' | 'resume' | 'speed' | 'restart' | 'traffic' | 'combine' | 'split'; speed?: 1 | 2 | 4; traffic?: TrafficLevel; position?: PositionId; into?: PositionId; seed?: number }
+  | { v: 1; type: 'sim.control'; action: 'pause' | 'resume' | 'speed' | 'restart' | 'traffic' | 'combine' | 'split'; speed?: 1 | 2 | 4; traffic?: TrafficLevel; position?: PositionId; into?: PositionId; seed?: number; scenario?: string }
   | { v: 1; type: 'alert.ack'; id: string };
 
 export type RejectReason = 'UNSAFE' | 'WORKLOAD' | 'TRAFFIC' | 'PILOT' | 'PREFER-OTHER' | 'OTHER';
