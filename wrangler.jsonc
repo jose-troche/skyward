@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "skyward-lite",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // Console HTML/JS/CSS are static assets: served free, without invoking the Worker.
+  "assets": { "directory": "./public" },
+  "durable_objects": {
+    "bindings": [
+      { "name": "AIRSPACE", "class_name": "AirspaceDO" },
+      { "name": "SAFETYNET", "class_name": "SafetyNetDO" },
+      { "name": "LOBBY", "class_name": "LobbyDO" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["AirspaceDO", "SafetyNetDO", "LobbyDO"] }
+  ],
+  "ai": { "binding": "AI" },
+  "observability": { "enabled": true },
+  "vars": {
+    // Free-plan daily budgets; the governor refuses new sessions at GOVERNOR_THRESHOLD of any of them.
+    // Update here (no code change) if Cloudflare changes free-tier terms.
+    "BUDGETS": {
+      "doRequests": 100000,
+      "doRowsWritten": 100000,
+      "doDurationGbS": 13000,
+      "workerRequests": 100000,
+      "aiNeurons": 10000
+    },
+    "GOVERNOR_THRESHOLD": 0.8,
+    "AI_MODEL": "@cf/meta/llama-3.2-3b-instruct",
+    "IDLE_PAUSE_MS": 600000
+  }
+}

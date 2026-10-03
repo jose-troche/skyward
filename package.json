@@ -1,0 +1,25 @@
+{
+  "name": "skyward-lite",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SKYWARD Lite: multi-agent ATC prototype on Cloudflare free tier. SIMULATION, NOT FOR OPERATIONAL USE.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-console.mjs",
+    "dev": "npm run build && wrangler dev --port 8787",
+    "deploy": "npm run build && wrangler deploy",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p console/tsconfig.json",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261003.1",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0",
+    "wrangler": "^4.40.0"
+  }
+}
