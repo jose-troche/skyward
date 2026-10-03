@@ -1,0 +1,12 @@
+{
+  "id": "08-lost-comms",
+  "name": "8 · Lost comms (7600)",
+  "description": "An aircraft squawks 7600 head-on with other traffic. It continues on its last clearance; other traffic is advised around it.",
+  "seed": 1008, "traffic": "none", "wind": [], "durationSec": 900,
+  "aircraft": [
+    { "callsign": "NKS808", "type": "A320", "kind": "overflight", "x": -77.8, "y": 7.07, "alt": 24000, "hdg": 45, "spd": 450, "origin": "KMEM", "dest": "KCLT" },
+    { "callsign": "FDX809", "type": "B763", "kind": "overflight", "x": -7.07, "y": 77.8, "alt": 24000, "hdg": 225, "spd": 470, "origin": "KCLT", "dest": "KMEM" }
+  ],
+  "events": [ { "at": 1, "kind": "squawk", "callsign": "NKS808", "code": "7600" } ],
+  "expect": { "nordo": "NKS808", "advisedOnly": "FDX809" }
+}

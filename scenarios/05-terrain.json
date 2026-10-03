@@ -1,0 +1,11 @@
+{
+  "id": "05-terrain",
+  "name": "5 · Terrain (MSAW)",
+  "description": "An arrival from the north is cleared down to 5,000 ft early, over the high-terrain cells. Expect an MSAW alert within one sweep.",
+  "seed": 1005, "traffic": "none", "wind": [], "durationSec": 400,
+  "aircraft": [
+    { "callsign": "EDV505", "type": "CRJ9", "kind": "arrival", "x": -5, "y": 92, "alt": 9000, "hdg": 180, "spd": 280, "clearedAlt": 9000, "origin": "KTYS", "dest": "KATL", "runway": "27R" }
+  ],
+  "events": [ { "at": 10, "kind": "clearance", "position": "CTR-NW", "clearance": { "flight": "EDV505", "alt": 5000 } } ],
+  "expect": { "msawWithinSweeps": 1 }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "06-runway-incursion",
+  "name": "6 · Runway incursion",
+  "description": "A departure is cleared to line up on 27L while an arrival is on a 2 NM final to the same runway. Expect a runway alert within one sweep of the conflicting clearance.",
+  "seed": 1006, "traffic": "none", "wind": [], "durationSec": 120,
+  "aircraft": [
+    { "callsign": "DAL606", "type": "B738", "kind": "arrival", "x": 4.1, "y": -0.75, "alt": 1877, "hdg": 270, "spd": 145, "approach": "27L", "runway": "27L", "phase": "approach", "owner": "TWR", "origin": "KLGA", "dest": "KATL" },
+    { "callsign": "SWA607", "type": "B738", "kind": "departure", "x": 1.5, "y": -1.0, "alt": 1000, "hdg": 360, "spd": 0, "phase": "holding-short", "owner": "TWR", "route": ["DEPNW"], "runway": "27L", "clearedAlt": 10000, "requestedAlt": 23000, "origin": "KATL", "dest": "KDEN" }
+  ],
+  "events": [ { "at": 5, "kind": "clearance", "position": "TWR", "clearance": { "flight": "SWA607", "lineup": "27L" } } ],
+  "expect": { "rwyWithinSweeps": 1 }
+}

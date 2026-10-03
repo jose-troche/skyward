@@ -1,0 +1,11 @@
+{
+  "id": "07-emergency",
+  "name": "7 · Emergency (7700)",
+  "description": "A widebody squawks 7700 and requests descent. Highlighted on all consoles; agents reprioritize within 5 s.",
+  "seed": 1007, "traffic": "light", "wind": [{"alt":0,"dir":270,"spd":8},{"alt":10000,"dir":280,"spd":25},{"alt":30000,"dir":290,"spd":55}], "durationSec": 900,
+  "aircraft": [
+    { "callsign": "DAL707", "type": "B763", "kind": "overflight", "x": -55, "y": 32, "alt": 28000, "hdg": 120, "spd": 470, "origin": "KSEA", "dest": "KMCO" }
+  ],
+  "events": [ { "at": 20, "kind": "squawk", "callsign": "DAL707", "code": "7700" } ],
+  "expect": { "emergAlertWithinSweeps": 1, "reprioritizeWithinSec": 5 }
+}

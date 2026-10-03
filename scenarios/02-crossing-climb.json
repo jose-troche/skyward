@@ -1,0 +1,13 @@
+{
+  "id": "02-crossing-climb",
+  "name": "2 · Crossing conflict, one climbing",
+  "description": "A departure climbing to 17,000 crosses a northbound overflight at 11,000. Expect an altitude or vector resolution that creates no secondary conflict.",
+  "seed": 1002, "traffic": "none", "wind": [], "durationSec": 900,
+  "aircraft": [
+    { "callsign": "UAL303", "type": "B739", "kind": "departure", "x": -15, "y": -2, "alt": 5000, "hdg": 270, "spd": 250, "clearedAlt": 17000, "origin": "KATL", "dest": "KDFW", "requestedAlt": 23000 },
+    { "callsign": "SWA404", "type": "B738", "kind": "overflight", "x": -25, "y": -18, "alt": 11000, "hdg": 360, "spd": 400, "origin": "KPNS", "dest": "KBNA" },
+    { "callsign": "EDV411", "type": "CRJ9", "kind": "overflight", "x": -40, "y": -10, "alt": 12000, "hdg": 90, "spd": 300, "origin": "KBHM", "dest": "KAGS" }
+  ],
+  "events": [],
+  "expect": { "resolutionKinds": ["alt", "hdg"], "noSecondaryConflict": true }
+}

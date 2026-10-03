@@ -1,0 +1,14 @@
+{
+  "id": "09-wrong-readback",
+  "name": "9 · Wrong readback",
+  "description": "The pilot reads back 10,000 instead of the issued 11,000. Expect a readback mismatch alert before the aircraft reaches the wrong altitude.",
+  "seed": 1009, "traffic": "none", "wind": [], "durationSec": 300,
+  "aircraft": [
+    { "callsign": "ASA909", "type": "B739", "kind": "overflight", "x": -55, "y": 40, "alt": 15000, "hdg": 120, "spd": 320, "origin": "KSEA", "dest": "KJAX" }
+  ],
+  "events": [
+    { "at": 3, "kind": "wrongReadback", "callsign": "ASA909", "alt": 10000 },
+    { "at": 8, "kind": "clearance", "position": "CTR-NW", "clearance": { "flight": "ASA909", "alt": 11000 } }
+  ],
+  "expect": { "readbackAlertBeforeAlt": 10000 }
+}

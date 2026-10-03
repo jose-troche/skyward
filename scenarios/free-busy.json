@@ -1,0 +1,7 @@
+{
+  "id": "free-busy",
+  "name": "Free play · busy traffic",
+  "description": "Generated traffic at 45 arrivals per hour plus departures.",
+  "seed": 7, "traffic": "busy", "wind": [{"alt":0,"dir":270,"spd":8},{"alt":10000,"dir":280,"spd":25},{"alt":30000,"dir":290,"spd":55}], "durationSec": 36000,
+  "aircraft": [], "events": [], "expect": {}
+}

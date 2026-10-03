@@ -1,0 +1,12 @@
+{
+  "id": "03-agents-off",
+  "name": "3 · Agents off, conflict alert on",
+  "description": "Scenario 1 with the Separation agent switched off. No advisory appears; the independent SafetyNet DO raises a conflict alert about 2 min before loss of separation, every time.",
+  "seed": 1003, "traffic": "none", "wind": [], "durationSec": 600, "agentsOff": ["separation"],
+  "aircraft": [
+    { "callsign": "DAL101", "type": "B738", "kind": "overflight", "x": -77.8, "y": 7.07, "alt": 24000, "hdg": 45, "spd": 450, "origin": "KMEM", "dest": "KCLT" },
+    { "callsign": "AAL202", "type": "A320", "kind": "overflight", "x": -7.07, "y": 77.8, "alt": 24000, "hdg": 225, "spd": 450, "origin": "KCLT", "dest": "KMEM" }
+  ],
+  "events": [],
+  "expect": { "caLeadSec": [90, 150], "advisories": 0 }
+}

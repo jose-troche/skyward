@@ -1,0 +1,12 @@
+{
+  "id": "01-head-on",
+  "name": "1 · Head-on en route conflict",
+  "description": "Two jets opposite direction at FL240 in CTR-NW, 100 NM apart. Expect a Separation advisory at least 5 min before loss of separation; the accepted resolution keeps 5 NM / 1,000 ft.",
+  "seed": 1001, "traffic": "none", "wind": [], "durationSec": 900,
+  "aircraft": [
+    { "callsign": "DAL101", "type": "B738", "kind": "overflight", "x": -77.8, "y": 7.07, "alt": 24000, "hdg": 45, "spd": 450, "origin": "KMEM", "dest": "KCLT" },
+    { "callsign": "AAL202", "type": "A320", "kind": "overflight", "x": -7.07, "y": 77.8, "alt": 24000, "hdg": 225, "spd": 450, "origin": "KCLT", "dest": "KMEM" }
+  ],
+  "events": [],
+  "expect": { "advisoryLeadSec": 300, "minSepNm": 5, "minSepFt": 1000 }
+}

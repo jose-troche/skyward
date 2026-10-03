@@ -1,0 +1,11 @@
+{
+  "id": "10-multiplayer-handoff",
+  "name": "10 · Multiplayer handoff",
+  "description": "Two humans on CTR-NW and APP. The sector agent proposes the handoff 3-5 min before the boundary, the receiving controller accepts, ownership moves and both consoles agree within one sweep.",
+  "seed": 1010, "traffic": "none", "wind": [], "durationSec": 600,
+  "aircraft": [
+    { "callsign": "JBU1010", "type": "A321", "kind": "arrival", "x": -62, "y": 9, "alt": 16000, "hdg": 68, "spd": 300, "clearedAlt": 11000, "route": ["NWARD", "NORTB"], "runway": "27R", "origin": "KBNA", "dest": "KATL" }
+  ],
+  "events": [],
+  "expect": { "handoffLeadSec": [180, 320], "from": "CTR-NW", "to": "APP" }
+}
